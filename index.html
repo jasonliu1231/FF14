@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>破劍誓言｜FF14 工會宣傳網站</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="bg-grid"></div>
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+    <div class="bg-glow glow-3"></div>
+    <div class="particles" id="particles"></div>
+
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a href="#top" class="logo">
+                <span class="logo-mark">✦</span>
+                <span class="logo-text">破劍誓言</span>
+            </a>
+
+            <button class="menu-btn" id="menuBtn" aria-label="開啟選單">☰</button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#about">工會特色</a>
+                <a href="#players">適合誰加入</a>
+                <a href="#join">加入我們</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero" id="top">
+        <div class="hero-lines"></div>
+        <div class="container hero-grid">
+            <div class="hero-content reveal">
+                <div class="eyebrow">FINAL FANTASY XIV FREE COMPANY</div>
+                <h1>破劍誓言</h1>
+                <p class="hero-subtitle">在星光與戰火之間，找到屬於你的隊友與歸屬</p>
+                <p class="hero-text">
+                    破劍誓言是一個重視陪伴、互助與遊戲樂趣的 FF14 工會。
+                    不論你是新手、回鍋玩家，或是想找一個穩定又有氣氛的家，
+                    都歡迎加入我們，一起探索艾歐澤亞、攻略副本、參與活動，留下屬於大家的冒險記錄。
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#join" class="btn btn-primary glow-btn">立即加入</a>
+                    <a href="#about" class="btn btn-secondary">查看特色</a>
+                </div>
+            </div>
+
+            <div class="hero-panel reveal floating-panel">
+                <div class="panel-frame">
+                    <div class="scan-line"></div>
+
+                    <div class="panel-top">
+                        <span class="chip">BROKEN BLADE OATH</span>
+                        <span class="status">ONLINE</span>
+                    </div>
+
+                    <h2>不只是工會，<br />更是你的前線基地</h2>
+                    <p>
+                        我們希望打造的不只是招募頁，而是一個讓人上線就能感到安心與期待的地方。
+                        有人陪你打本，有人陪你聊天，也有人陪你一起胡鬧與成長。
+                    </p>
+
+                    <div class="data-grid">
+                        <div class="data-card">
+                            <span class="data-label">氛圍</span>
+                            <strong>友善互助</strong>
+                        </div>
+                        <div class="data-card">
+                            <span class="data-label">定位</span>
+                            <strong>新手回鍋友善</strong>
+                        </div>
+                        <div class="data-card">
+                            <span class="data-label">活動</span>
+                            <strong>副本 / 地圖 / 幻化</strong>
+                        </div>
+                        <div class="data-card">
+                            <span class="data-label">目標</span>
+                            <strong>輕鬆長久經營</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <div class="section-heading reveal">
+                <small>FEATURES</small>
+                <h3>破劍誓言的核心特色</h3>
+                <p>我們希望每位成員不只是加入一個名單，而是真正加入一個能一起冒險的團隊。</p>
+            </div>
+
+            <div class="feature-grid">
+                <article class="feature-card reveal">
+                    <div class="feature-icon">01</div>
+                    <h4>歡樂日常同樂</h4>
+                    <p>每日副本、地圖、極本練習、掛機聊天都可以。無論你是想認真攻略，還是想輕鬆找伴，都能自在加入。</p>
+                </article>
+
+                <article class="feature-card reveal">
+                    <div class="feature-icon">02</div>
+                    <h4>新手與回鍋友善</h4>
+                    <p>補主線、練職業、熟悉機制、重新找回遊戲節奏，都可以慢慢來。我們重視陪伴感，不重壓力感。</p>
+                </article>
+
+                <article class="feature-card reveal">
+                    <div class="feature-icon">03</div>
+                    <h4>活動參與感高</h4>
+                    <p>除了副本，也會有拍照、幻化、節慶、地圖等活動，讓工會生活不只是戰鬥，也有回憶與故事。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid reveal">
+                <div class="stats-card count-card">
+                    <span>工會風格</span>
+                    <strong class="counter" data-target="100">0</strong>
+                    <em>% 熱血投入</em>
+                </div>
+                <div class="stats-card count-card">
+                    <span>招募方向</span>
+                    <strong class="counter" data-target="24">0</strong>
+                    <em>小時都歡迎聊天</em>
+                </div>
+                <div class="stats-card count-card">
+                    <span>長期目標</span>
+                    <strong class="counter" data-target="999">0</strong>
+                    <em>場共同冒險的開始</em>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="players">
+        <div class="container dual-grid">
+            <div class="info-card reveal">
+                <small>RECRUITMENT TARGET</small>
+                <h3>適合哪些玩家加入？</h3>
+                <p>只要你喜歡 FF14，也希望有一個穩定、友善、熱鬧的環境，這裡就很適合你。</p>
+
+                <div class="bullet-list">
+                    <div class="bullet-item">剛入坑，想找人陪跑主線與副本</div>
+                    <div class="bullet-item">回鍋玩家，想重新熟悉系統與環境</div>
+                    <div class="bullet-item">喜歡拍照、幻化、聊天與活動參與</div>
+                    <div class="bullet-item">希望找到能長久待著的工會據點</div>
+                </div>
+            </div>
+
+            <div class="info-card reveal" id="join">
+                <small>JOIN BROKEN BLADE OATH</small>
+                <h3>加入破劍誓言</h3>
+                <p>
+                    想一起打本、聊天、拍照、參與活動，或只是想找個舒服的地方掛著都可以。
+                    只要你願意友善互動、尊重彼此節奏，破劍誓言都歡迎你。工會長為銀色黎明。
+                </p>
+
+                <div class="join-list">
+                    <div class="join-item">
+                        <strong>招募條件</strong>
+                        <span>友善、有禮貌、願意一起享受遊戲與團體氣氛。</span>
+                    </div>
+                    <div class="join-item">
+                        <strong>聯絡方式</strong>
+                        <span>這裡可替換成 Discord、遊戲內角色名稱、招募表單或社群連結。</span>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#" class="btn btn-primary glow-btn">Discord 連結</a>
+                    <a href="#" class="btn btn-secondary">遊戲內聯絡</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-title">破劍誓言 Broken Blade Oath</div>
+            <div class="footer-text">FF14 工會宣傳靜態網站</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
