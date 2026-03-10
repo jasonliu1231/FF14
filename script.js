@@ -24,17 +24,17 @@ if (menuBtn && navLinks) {
 
 const particlesContainer = document.getElementById("particles");
 
-function createParticles(count = 28) {
+function createParticles(count = 32) {
   if (!particlesContainer) return;
 
   for (let i = 0; i < count; i++) {
     const particle = document.createElement("span");
-    particle.className = "particle";
+    particle.className = "magic-particle";
 
     const size = Math.random() * 3 + 1.5;
     const left = Math.random() * 100;
-    const delay = Math.random() * 8;
-    const duration = Math.random() * 12 + 10;
+    const delay = Math.random() * 10;
+    const duration = Math.random() * 14 + 10;
 
     particle.style.width = `${size}px`;
     particle.style.height = `${size}px`;
@@ -89,13 +89,4 @@ const counterObserver = new IntersectionObserver(
 
 document.querySelectorAll(".count-card").forEach((card) => {
   counterObserver.observe(card);
-});
-
-window.addEventListener("mousemove", (e) => {
-  const x = (e.clientX / window.innerWidth - 0.5) * 10;
-  const y = (e.clientY / window.innerHeight - 0.5) * 10;
-
-  document.querySelectorAll(".floating-panel").forEach((el) => {
-    el.style.transform = `translate(${x * 0.4}px, ${y * 0.4}px)`;
-  });
 });
