@@ -267,10 +267,71 @@
         <div class="container">
             <div class="footer-title">破劍誓言 Broken Blade Oath</div>
             <div class="footer-text">FF14 公會宣傳靜態網站｜公會長：銀色黎明</div>
+
+            <div class="visitor-counter">
+                ✦ 瀏覽人數：
+                <span id="visitor-count">讀取中...</span>
+            </div>
         </div>
     </footer>
 
+    <div class="music-widget">
+        <button class="music-toggle" id="musicToggle" type="button" aria-label="開啟音樂播放器">
+            <span class="music-icon">♫</span>
+            <span class="music-label">BGM</span>
+        </button>
+
+        <div class="music-panel" id="musicPanel">
+            <div class="music-panel-header">
+                <div>
+                    <div class="music-title">FFXIV Endwalker</div>
+                    <div class="music-subtitle">ENDWALKER Music Video</div>
+                </div>
+                <button class="music-close" id="musicClose" type="button" aria-label="關閉播放器">×</button>
+            </div>
+
+            <div class="music-frame-wrap">
+                <iframe id="musicFrame" src="" title="FFXIV Endwalker Music Video" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+
+    <script>
+        async function updateVisitorCount() {
+            const counterEl = document.getElementById("visitor-count");
+
+            // 這個 key 請改成你自己的，而且要夠獨特
+            // 建議格式：網站名稱-年份-用途
+            const SITE_COUNTER_KEY = "broken-blade-oath-ff14-fc-2026-main-site";
+
+            try {
+                const response = await fetch(
+                    `https://countapi.mileshilliard.com/api/v1/hit/${SITE_COUNTER_KEY}`
+                );
+
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                if (data && typeof data.value !== "undefined") {
+                    counterEl.textContent = Number(data.value).toLocaleString("zh-TW");
+                } else {
+                    counterEl.textContent = "無法讀取";
+                }
+            } catch (error) {
+                console.error("瀏覽人數讀取失敗：", error);
+                counterEl.textContent = "無法讀取";
+            }
+        }
+
+        updateVisitorCount();
+    </script>
 </body>
 
 </html>
